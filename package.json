@@ -1,0 +1,27 @@
+{
+  "name": "sequelize-burger-shop",
+  "version": "1.0.0",
+  "description": "full stack app with sequelize ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattbeachey/sequelize-burger-shop.git"
+  },
+  "author": "Matt Beachey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattbeachey/sequelize-burger-shop/issues"
+  },
+  "homepage": "https://github.com/mattbeachey/sequelize-burger-shop#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}
