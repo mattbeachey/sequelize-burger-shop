@@ -11,8 +11,14 @@ module.exports = function (app) {
     //route to display burgers
     app.get("/api/burgers", async function (req, res) {
         const burger = await db.Burgers.findAll({})
-        console.log(burger)
+        // console.log(burger)
         res.json(burger);
+    })
+
+    //route to update burger_db
+    app.put("/api/burgers/:id", async function (req, res){
+        const burger = await db.Burgers.update({ where: {id: req.params.id}})
+        console.log(req.params.id)
     })
 
 };

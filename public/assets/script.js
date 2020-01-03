@@ -26,14 +26,22 @@ function displayBurgers(){
             return valueObject.eaten == false
         })
         console.log(uneaten)
+        const uneatenBurgers = document.getElementById("unEaten")
+        const uneatenBurgersStr = uneaten.map(burger => `<div class="burger-box">${burger.burgerName}<button onclick="eatBurger(${burger.id})"id="${burger.id}">Eat This Burger</button></div>`)
+        console.log(uneatenBurgersStr)
+        const burgersAndButtonsHTML = uneatenBurgersStr.join("<br>")
+        uneatenBurgers.innerHTML = burgersAndButtonsHTML;
 
         const eaten = response.data.filter(function(valueObject){
             return valueObject.eaten == true
         })
         console.log(eaten)
+        const eatenBurgers = document.getElementById("eaten")
     })
 }
 
+function eatBurger(id){
+    
+}
 
-
-
+displayBurgers()
