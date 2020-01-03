@@ -16,32 +16,44 @@ burgerButtonEl.addEventListener("click", function () {
             console.log(error);
         });
 
-    
+
 })
 
-function displayBurgers(){
+//display all burgers in uneaten/eaten collumns
+function displayBurgers() {
     axios.get('/api/burgers')
-    .then(function(response){
-        const uneaten = response.data.filter(function(valueObject){
-            return valueObject.eaten == false
-        })
-        console.log(uneaten)
-        const uneatenBurgers = document.getElementById("unEaten")
-        const uneatenBurgersStr = uneaten.map(burger => `<div class="burger-box">${burger.burgerName}<button onclick="eatBurger(${burger.id})"id="${burger.id}">Eat This Burger</button></div>`)
-        console.log(uneatenBurgersStr)
-        const burgersAndButtonsHTML = uneatenBurgersStr.join("<br>")
-        uneatenBurgers.innerHTML = burgersAndButtonsHTML;
+        .then(function (response) {
+            const uneaten = response.data.filter(function (valueObject) {
+                return valueObject.eaten == false
+            })
+            console.log(uneaten)
+            const uneatenBurgersEl = document.getElementById("unEaten")
+            const uneatenBurgersStr = uneaten.map(burger => `<div class="burger-box">${burger.burgerName}<button onclick="eatBurger(${burger.id})"id="${burger.id}">Eat This Burger</button></div>`)
+            console.log(uneatenBurgersStr)
+            const burgersAndButtonsHTML = uneatenBurgersStr.join("<br>")
+            uneatenBurgersEl.innerHTML = burgersAndButtonsHTML;
 
-        const eaten = response.data.filter(function(valueObject){
-            return valueObject.eaten == true
+            const eaten = response.data.filter(function (valueObject) {
+                return valueObject.eaten == true
+            })
+            console.log(eaten)
+            const eatenBurgersEl = document.getElementById("eaten")
+            const eatenBurgersStr = eaten.map(burger => `<div class="burger-box">${burger.burgerName}</div>`)
+            const eatenBurgersHTML = eatenBurgersStr.join("<br>")
+            eatenBurgersEl.innerHTML = eatenBurgersHTML
         })
-        console.log(eaten)
-        const eatenBurgers = document.getElementById("eaten")
-    })
 }
 
-function eatBurger(id){
-    
+function eatBurger(id) {
+    console.log(id)
+    axios.put(`/api/burgers/${id}`)
+        .then(function (response) {
+            console.log(response);
+            displayBurgers();
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 displayBurgers()
