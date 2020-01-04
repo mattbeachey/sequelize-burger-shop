@@ -22,7 +22,7 @@ module.exports = function (app) {
         res.json(burger)
     })
 
-    //delete test route
+    //delete route
     app.delete("/api/burgers/:id", async function(req, res){
         console.log(req.params.id)
         const burger = await db.Burgers.destroy({where: {id: req.params.id}})
@@ -30,10 +30,3 @@ module.exports = function (app) {
     })
 
 };
-
-
-    //route to update burger_db
-    // app.post("/api/burgers", async function (req, res){
-    //     const burger = await db.Burgers.update({eaten: true}, { where: {id: req.body.id}})
-    //     console.log(req.params.id)
-    // })
