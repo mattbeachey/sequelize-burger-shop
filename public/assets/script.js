@@ -7,6 +7,7 @@ const burgerButtonEl = document.getElementById("addBurger")
 
 //click handler for menu/about block
 const aboutButtonEl = document.getElementById("about-box")
+const fillInDivEl = document.getElementById("fillInDiv")
 const topBarEl = document.getElementById("bar1")
 const midBarEl = document.getElementById("bar2")
 const botBarEl = document.getElementById("bar3")
@@ -14,6 +15,7 @@ aboutButtonEl.addEventListener("click", function (){
     topBarEl.classList.toggle("bar1clicked")
     midBarEl.classList.toggle("bar2clicked")
     botBarEl.classList.toggle("bar3clicked")
+    fillInDivEl.classList.toggle("fill-in-div")
 })
 
 

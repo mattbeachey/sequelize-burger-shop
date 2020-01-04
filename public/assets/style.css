@@ -6,11 +6,11 @@ body {
     position: absolute;
     top: 15px;
     left: 15px;
-    width: 30px;
-    height: 30px;
-    display: flex;
+    width: 35px;
+    height: 35px;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .bar1, .bar2, .bar3 {
@@ -21,6 +21,17 @@ body {
     transition: .5s;
 }
 
+.bar2{
+    position: absolute;
+    top: 12px;
+}
+
+.bar3{
+    position: absolute;
+    top: 24px;
+}
+
+
 .bar1clicked {
     transform: rotate(45deg);
     position: absolute;
@@ -30,8 +41,9 @@ body {
 }
 
 .bar2clicked {
-    opacity: 0;
-    transition: 1s;
+    
+    width: 0px;
+    transition: .6s;
     position: absolute;
     top: 8px;
 }
@@ -47,11 +59,21 @@ body {
 
 
 h1 {
+    /* position: absolute;
+    top: -50px; */
     font-size: 8vw;
     color: 	#a33815;
     /* font-family: 'Corben', cursive; */
     font-family: 'Rubik Mono One', sans-serif;
     z-index: 1;
+}
+
+h3 {
+    position: absolute;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1vw;
+    color: #e81802;
+    top: 0;
 }
 
 .top-div {
@@ -60,18 +82,43 @@ h1 {
     left: 0;
     width: 0;
     height: 23vh;
-    border-left: 100vw solid #faab3e;
+    border-left: 98.9vw solid #faab3e;
     border-bottom: 5vh solid transparent;
     z-index: -1;
+}
+
+.fill-in-div-hide {
+    position: absolute;
+    left: 0;
+    top: 99vh;
+    width: 0;
+    height: 0vh;
+    border-right: 98.9vw solid #faab3e;
+    border-top: 0vh solid transparent;
+    z-index: 2;
+    transition: .7s;
+}
+
+.fill-in-div {
+    position: absolute;
+    top: 22vh;
+    left: 0;
+    width: 0;
+    height: 80vh;
+    border-right: 98.9vw solid #faab3e;
+    border-top: 5vh solid transparent;
+    z-index: 2;
+    transition: .7s;
 }
 
 .title-box {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 98vw;
     height: 25vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -151,5 +198,15 @@ input {
     h1 {
         font-size: 14vw;
         text-align: center;
+        z-index: 0;
+    }
+
+    h3 {
+        font-size: 3vw;
+        z-index: 1;
+    }
+
+    input, .add-button {
+        font-size: 30px;
     }
 }
