@@ -95,6 +95,7 @@ h3 {
     height: 0vh;
     border-right: 98.9vw solid #faab3e;
     border-top: 0vh solid transparent;
+    opacity: .8;
     z-index: 2;
     transition: .7s;
 }
@@ -104,9 +105,10 @@ h3 {
     top: 22vh;
     left: 0;
     width: 0;
-    height: 80vh;
+    height: 90vh;
     border-right: 98.9vw solid #faab3e;
     border-top: 5vh solid transparent;
+    opacity: 1;
     z-index: 2;
     transition: .7s;
 }
@@ -144,6 +146,11 @@ input {
     border: 1px solid #e81802;
     color: #e81802;
     text-align: center;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #e81802;
 }
 
 .add-button {
@@ -207,6 +214,6 @@ input {
     }
 
     input, .add-button {
-        font-size: 30px;
+        font-size: 20px;
     }
 }

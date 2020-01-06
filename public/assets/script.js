@@ -35,7 +35,8 @@ burgerButtonEl.addEventListener("click", function () {
             });
     } else {
         // case if user doesn't enter a name for new burger
-        burgerInputEl.setAttribute("placeholder", "Please name your burger")
+        burgerInputEl.setAttribute("placeholder", "!!!    Please name your burger    !!!")
+        burgerInputEl.focus();
     }
 })
 
