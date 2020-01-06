@@ -82,7 +82,7 @@ h3 {
     left: 0;
     width: 0;
     height: 23vh;
-    border-left: 98.9vw solid #faab3e;
+    border-left: 100vw solid #faab3e;
     border-bottom: 5vh solid transparent;
     z-index: -1;
 }
@@ -93,7 +93,7 @@ h3 {
     top: 99vh;
     width: 0;
     height: 0vh;
-    border-right: 98.9vw solid #faab3e;
+    border-right: 100vw solid #faab3e;
     border-top: 0vh solid transparent;
     opacity: .8;
     z-index: 2;
@@ -106,7 +106,7 @@ h3 {
     left: 0;
     width: 0;
     height: 90vh;
-    border-right: 98.9vw solid #faab3e;
+    border-right: 100vw solid #faab3e;
     border-top: 5vh solid transparent;
     opacity: 1;
     z-index: 2;

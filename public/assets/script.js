@@ -29,6 +29,7 @@ burgerButtonEl.addEventListener("click", function () {
         })
             .then(function (response) {
                 displayBurgers();
+                console.log(burgerInputEl)
             })
             .catch(function (error) {
                 console.log(error);
