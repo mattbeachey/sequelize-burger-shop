@@ -48,17 +48,17 @@ function condimentSelect(burger){
     console.log(burger)
     if (burger%2 == 0){
         if (burger%4 == 0){
-            return "condiment1"
+            return "1"
         } else {
-            return "condiment2"
+            return "2"
         }
         
     }
     else {
         if ((--burger)%4 == 0){
-            return "condiment3"
+            return "3"
         } else {
-            return "condiment4"
+            return "4"
         }
         
     }
@@ -74,7 +74,7 @@ function displayBurgers() {
             })
             console.log(uneaten)
             const uneatenBurgersEl = document.getElementById("unEaten")
-            const uneatenBurgersStr = uneaten.map(burger => `<div class="${condimentSelect(burger.id)}">${burger.burgerName}<button onclick="eatBurger(${burger.id})"id="${burger.id}">Eat This Burger</button></div>`)
+            const uneatenBurgersStr = uneaten.map(burger => `<div class="condiment${condimentSelect(burger.id)}">${burger.burgerName}<button onclick="eatBurger(${burger.id}) "id="${burger.id}" class="eatbutton${condimentSelect(burger.id)}">&nbsp;Eat This Burger&nbsp;</button></div>`)
             console.log(uneatenBurgersStr)
             const burgersAndButtonsHTML = uneatenBurgersStr.join("<br>")
             uneatenBurgersEl.innerHTML = burgersAndButtonsHTML;
@@ -84,7 +84,7 @@ function displayBurgers() {
             })
             console.log(eaten)
             const eatenBurgersEl = document.getElementById("eaten")
-            const eatenBurgersStr = eaten.map(burger => `<div class="${condimentSelect(burger.id)}">${burger.burgerName}</div>`)
+            const eatenBurgersStr = eaten.map(burger => `<div class="condiment${condimentSelect(burger.id)}">${burger.burgerName}</div>`)
             const eatenBurgersHTML = eatenBurgersStr.join("<br>")
             eatenBurgersEl.innerHTML = eatenBurgersHTML
         })
