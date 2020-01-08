@@ -33,9 +33,6 @@ body {
     transition: .4s;
 }
 
-
-
-
 a {
     color: inherit;
 }
@@ -57,7 +54,6 @@ a {
     position: absolute;
     top: 24px;
 }
-
 
 .bar1clicked {
     transform: rotate(45deg);
@@ -82,8 +78,6 @@ a {
     opacity: 1;
     transition: .5s;
 } 
-
-
 
 h1 {
     /* position: absolute;
@@ -250,29 +244,35 @@ input:focus{
     align-items: center;
 }
 
-.condiment1{
-    background-color: #a33815;
+.condiment1, .condiment2, .condiment3, .condiment4 {
     height: 50px;
     margin: -9px;
-    width: 265px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: white;
     font-family: 'Dosis', sans-serif;
     font-size: 20px;
 }
 
-.eatbutton1 {
-    color: #a33815;
+.eatbutton1, .eatbutton2, .eatbutton3, .eatbutton4 {
     height: 30px;
     font-size: 20px;
     font-family: 'Dosis', sans-serif;
-    background-color: white;
     border: none;
     border-radius: 8px;
     padding: 4px;
     transition: .5s;
+}
+
+.condiment1{
+    background-color: #a33815;
+    width: 265px;
+    color: white;
+}
+
+.eatbutton1 {
+    color: #a33815;
+    background-color: white;
 }
 
 .eatbutton1:hover {
@@ -283,27 +283,14 @@ input:focus{
 
 .condiment2{
     background-color: #ffda01;
-    height: 50px;
-    margin: -9px;
-    width: 290px;
+    width: 280px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     color: #a33815;
-    font-family: 'Dosis', sans-serif;
-    font-size: 20px;
 }
 
 .eatbutton2 {
     color: #a33815;
-    height: 30px;
-    font-size: 20px;
-    font-family: 'Dosis', sans-serif;
     background-color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 4px;
-    transition: .5s;
 }
 
 .eatbutton2:hover {
@@ -314,27 +301,13 @@ input:focus{
 
 .condiment3{
     background-color: #e81802;
-    height: 50px;
-    margin: -9px;
     width: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     color: white;
-    font-family: 'Dosis', sans-serif;
-    font-size: 20px;
 }
 
 .eatbutton3 {
     color: #e81802;
-    height: 30px;
-    font-size: 20px;
-    font-family: 'Dosis', sans-serif;
     background-color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 4px;
-    transition: .5s;
 }
 
 .eatbutton3:hover {
@@ -345,27 +318,13 @@ input:focus{
 
 .condiment4{
     background-color: #a1d501;
-    height: 50px;
-    margin: -9px;
     width: 290px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     color: white;
-    font-family: 'Dosis', sans-serif;
-    font-size: 20px;
 }
 
 .eatbutton4 {
     color: #a1d501;
-    height: 30px;
-    font-size: 20px;
-    font-family: 'Dosis', sans-serif;
     background-color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 4px;
-    transition: .5s;
 }
 
 .eatbutton4:hover{
@@ -373,7 +332,6 @@ input:focus{
     color: white;
     transition: .5s;
 }
-
 
 @media screen and (max-width: 700px) {
     h1 {

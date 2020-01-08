@@ -32,6 +32,7 @@ burgerButtonEl.addEventListener("click", function () {
     if (burgerInputEl.value) {
 
         name = burgerInputEl.value
+        if (name.length < 13) {
         axios.post('/api/burgers', {
             burgerName: name
         })
@@ -42,6 +43,13 @@ burgerButtonEl.addEventListener("click", function () {
             .catch(function (error) {
                 console.log(error);
             });
+            burgerInputEl.setAttribute("placeholder", "Mmmm, sounds like a good burger")
+            burgerInputEl.value = "";
+
+        } else {
+            burgerInputEl.setAttribute("placeholder", "Your burger name is too long!")
+            burgerInputEl.value = "";
+        }
     } else {
         // case if user doesn't enter a name for new burger
         burgerInputEl.setAttribute("placeholder", "!!!    Please name your burger    !!!")
