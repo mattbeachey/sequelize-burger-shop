@@ -96,9 +96,12 @@ h1 {
 }
 
 h2 {
+    position: relative;
+    top: 25px;
     font-family: 'Rubik Mono One', sans-serif;
     color: 	#a33815;
     font-size: 20px;
+    text-align: center;
 }
 
 h3 {
@@ -216,6 +219,19 @@ input:focus{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.top-bun {
+    position: relative;
+    bottom: 6px;
+    width: 320px;
+    height: 100px;
+    background-color: #faab3e;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
 }
 
 .bottom-bun {
