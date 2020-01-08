@@ -11,11 +11,19 @@ const fillInDivEl = document.getElementById("fillInDiv")
 const topBarEl = document.getElementById("bar1")
 const midBarEl = document.getElementById("bar2")
 const botBarEl = document.getElementById("bar3")
+const aboutTextEl = document.getElementById("aboutText")
 aboutButtonEl.addEventListener("click", function (){
     topBarEl.classList.toggle("bar1clicked")
     midBarEl.classList.toggle("bar2clicked")
     botBarEl.classList.toggle("bar3clicked")
     fillInDivEl.classList.toggle("fill-in-div")
+    // console.log(aboutTextEl.innerText)
+    // if (aboutTextEl.innerText = ".") {
+    //     aboutTextEl.innerText = "test"
+    //     console.log("affirmative")
+    // } else {
+    //     aboutTextEl.innerHTML = "."
+    // }
 })
 
 
