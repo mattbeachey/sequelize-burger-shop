@@ -1,5 +1,3 @@
-# sequelize-burger-shop
-
 # Full Stack Burger Shack
 Why make a to do app when you can make an app that allows you to name burgers and then eat them, moving them to an "eaten" container? 
 
@@ -13,4 +11,4 @@ Launched appication on Heroku: https://full-stack-burger-shack.herokuapp.com/
 
 ## Images
 Screenshot of Full Stack Burger Shack
-![App screenshot](./public/assets/images/screenshot1.png)
+![App screenshot](./public/assets/images/screenshot1.PNG)
