@@ -12,18 +12,35 @@ const topBarEl = document.getElementById("bar1")
 const midBarEl = document.getElementById("bar2")
 const botBarEl = document.getElementById("bar3")
 const aboutTextEl = document.getElementById("aboutText")
+let appearSelector = 1
 aboutButtonEl.addEventListener("click", function (){
     topBarEl.classList.toggle("bar1clicked")
     midBarEl.classList.toggle("bar2clicked")
     botBarEl.classList.toggle("bar3clicked")
     fillInDivEl.classList.toggle("fill-in-div")
-    // console.log(aboutTextEl.innerText)
-    // if (aboutTextEl.innerText = ".") {
-    //     aboutTextEl.innerText = "test"
-    //     console.log("affirmative")
-    // } else {
-    //     aboutTextEl.innerHTML = "."
-    // }
+    appearSelector++
+    console.log(appearSelector)
+    if (appearSelector%2 == 0) {
+        const aboutTextCont = document.createElement("p")
+        aboutTextCont.setAttribute("id", "justSomeRandomId")
+         aboutTextEl.append(aboutTextCont)
+         aboutTextCont.innerHTML = `
+         This full-stack web app is powered by an Express server and a MySQL database,
+        accessed using Sequelize as an ORM. Primarily for demonstration purposes, it allows a user to add an entry to a
+        global database, view all entries made by others to that database, and modify any item in that database and see
+        that modification reflected back in the DOM.
+        <br>
+        <br>
+        Check out the github repository <a href="https://github.com/mattbeachey/sequelize-burger-shop">here.</a>
+         `
+        setTimeout(function () {
+        aboutTextEl.classList.add("appear")
+        }, 500)
+    } else {
+        aboutTextEl.classList.remove("appear")
+        const throwAwayConst = document.getElementById("justSomeRandomId")
+        throwAwayConst.parentNode.removeChild(throwAwayConst)
+    }
 })
 
 
