@@ -49,7 +49,7 @@ burgerButtonEl.addEventListener("click", function () {
     if (burgerInputEl.value) {
 
         name = burgerInputEl.value
-        if (name.length < 13) {
+        if (name.length < 17) {
         axios.post('/api/burgers', {
             burgerName: name
         })
