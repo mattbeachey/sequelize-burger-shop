@@ -13,4 +13,4 @@ Launched appication on Heroku: https://full-stack-burger-shack.herokuapp.com/
 
 ## Images
 Screenshot of Full Stack Burger Shack
-![App screenshot](./public/assets/images/screenshot1)
+![App screenshot](./public/assets/images/screenshot1.png)
